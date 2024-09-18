@@ -1,0 +1,45 @@
+Move Component(s) Origin to Grid
+Filename     : F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc
+Date         : 9/17/2024
+Time         : 10:51:52 AM
+Time Elapsed : 00:00:00
+
+
+    Component X2-XTAL (15mm,4mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component X1-XTAL (15mm,-0.5mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C8-Capacitor (5.334mm,-11.176mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component S1-Tact SW - 2Pin (-13.75mm,-2.5mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component U2-STM32F103C8T6 (0mm,0mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component U1-RT9193-33GB (-15.451mm,-3.985mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R10-Resistor (19.25mm,-3.75mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R9-Resistor (11.5mm,4mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R8-Resistor (19mm,11mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R7-Resistor (19.25mm,3.25mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R6-Resistor (-28.32mm,-8.236mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R5-Resistor (-35.896mm,-5.753mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R4-Resistor (-35.871mm,-3.453mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R3-Resistor (-8.5mm,4.5mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R2-Resistor (-8.55mm,0.509mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component R1-Resistor (-35.846mm,-1.053mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SIP Component P2-Header 4 (24mm,-1.25mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component P1-Header 3X2 (-13.675mm,2.729mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SIP Component J3-2-87220-0 (0mm,-7.62mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SIP Component J2-2-87220-0 (0mm,7.62mm) on Top Layer - Component pads are OFF grid. No action taken.
+    Component J1-USB micro (-24mm,0mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D2-LED SMD (20.75mm,-1.25mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component D1-LED SMD (20.7mm,0.5mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C15-Capacitor (18.5mm,5mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C14-Capacitor (18.5mm,0.5mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C13-Capacitor (18.5mm,2.75mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C12-Capacitor (18.5mm,-1.75mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C11-Capacitor (-32mm,-8.25mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C10-Capacitor (-5.75mm,4.5mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C9-Capacitor (-5.25mm,-4mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C7-Capacitor (10.414mm,11.43mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C6-Capacitor (21.25mm,3.25mm) on Top Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C5-Capacitor (-7.451mm,-3.985mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C4-Capacitor (-9.701mm,-3.985mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C3-Capacitor (-11.951mm,-3.985mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C2-Capacitor (-18.951mm,-3.985mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+    SMT Small Component C1-Capacitor (-21.25mm,-4mm) on Bottom Layer - Component pads are OFF grid. No action taken.
+count : 37

@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=PC15 Pin=Y1-1
+Removed Pin From Net: NetName=PC14 Pin=Y1-2
+Removed Pin From Net: NetName=OSC_OUT Pin=Y2-1
+Removed Pin From Net: NetName=OSC_IN Pin=Y2-2
+Removed Member From Class: ClassName=Bluepill Member=Y1
+Removed Member From Class: ClassName=Bluepill Member=Y2
+Added Component: Designator=X1(XTAL 3225)
+Add component (AddParameter): Name = "Value"; Value = "16MHz"; VariantName = "[No Variations]"
+Added Component: Designator=X2(XTAL 3225)
+Add component (AddParameter): Name = "Value"; Value = "16MHz"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=PC14 Pin=X1-1
+Added Pin To Net: NetName=PC15 Pin=X1-3
+Added Pin To Net: NetName=OSC_IN Pin=X2-1
+Added Pin To Net: NetName=OSC_OUT Pin=X2-3
+Added Member To Class: ClassName=Bluepill Member=Component X1 XTAL
+Added Member To Class: ClassName=Bluepill Member=Component X2 XTAL

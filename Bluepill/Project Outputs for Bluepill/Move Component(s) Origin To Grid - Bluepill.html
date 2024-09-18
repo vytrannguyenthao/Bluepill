@@ -1,0 +1,314 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Move Component(s) Origin to Grid</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Move Component(s) Origin to Grid</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9/17/2024</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:51:52 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc" class="file"><acronym title="F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc">F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc</acronym></a></td>
+</tr>
+</table><a name="IDELF4ZQTOAEH1N5NRQYVPPZG14MVQZJUFLJRHXYHWCRXRQ4V2HJQC"><h2>Components Origin</h2></a><a name="ID4MZT5BSYWFDOEPC5Z1J04QET2IDHN3VRWJPBOOPFJKCOQVDHKBEN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning"></th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4209.685mil|Location2.X=4342.559mil|Location1.Y=2979.661mil|Location2.Y=3234.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4209.685mil|Location2.X=4342.559mil|Location1.Y=2979.661mil|Location2.Y=3234.981mil|Absolute=True">Component X2-XTAL (15mm,4mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4209.685mil|Location2.X=4342.559mil|Location1.Y=2802.496mil|Location2.Y=3057.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4209.685mil|Location2.X=4342.559mil|Location1.Y=2802.496mil|Location2.Y=3057.981mil|Absolute=True">Component X1-XTAL (15mm,-0.5mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3832.087mil|Location2.X=3968mil|Location1.Y=2421.614mil|Location2.Y=2597.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3832.087mil|Location2.X=3968mil|Location1.Y=2421.614mil|Location2.Y=2597.981mil|Absolute=True">SMT Small Component C8-Capacitor (5.334mm,-11.176mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2983.244mil|Location2.X=3314.079mil|Location1.Y=2723.575mil|Location2.Y=2965.568mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2983.244mil|Location2.X=3314.079mil|Location1.Y=2723.575mil|Location2.Y=2965.568mil|Absolute=True">SMT Small Component S1-Tact SW - 2Pin (-13.75mm,-2.5mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3381.677mil|Location2.X=3980.508mil|Location1.Y=2609.492mil|Location2.Y=3190.508mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3381.677mil|Location2.X=3980.508mil|Location1.Y=2609.492mil|Location2.Y=3190.508mil|Absolute=True">Component U2-STM32F103C8T6 (0mm,0mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3001.968mil|Location2.X=3161.417mil|Location1.Y=2673.229mil|Location2.Y=2878.104mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3001.968mil|Location2.X=3161.417mil|Location1.Y=2673.229mil|Location2.Y=2878.104mil|Absolute=True">Component U1-RT9193-33GB (-15.451mm,-3.985mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4411.457mil|Location2.X=4567.868mil|Location1.Y=2686.417mil|Location2.Y=2842.346mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4411.457mil|Location2.X=4567.868mil|Location1.Y=2686.417mil|Location2.Y=2842.346mil|Absolute=True">SMT Small Component R10-Resistor (19.25mm,-3.75mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4099.433mil|Location2.X=4186.078mil|Location1.Y=2991.535mil|Location2.Y=3201.474mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4099.433mil|Location2.X=4186.078mil|Location1.Y=2991.535mil|Location2.Y=3201.474mil|Absolute=True">SMT Small Component R9-Resistor (11.5mm,4mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4321.709mil|Location2.X=4474.449mil|Location1.Y=3267.126mil|Location2.Y=3399.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4321.709mil|Location2.X=4474.449mil|Location1.Y=3267.126mil|Location2.Y=3399.016mil|Absolute=True">SMT Small Component R8-Resistor (19mm,11mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4411.457mil|Location2.X=4484.291mil|Location1.Y=2860.63mil|Location2.Y=3093.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4411.457mil|Location2.X=4484.291mil|Location1.Y=2860.63mil|Location2.Y=3093.898mil|Absolute=True">SMT Small Component R7-Resistor (19.25mm,3.25mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2406.717mil|Location2.X=2640.984mil|Location1.Y=2539.331mil|Location2.Y=2612.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2406.717mil|Location2.X=2640.984mil|Location1.Y=2539.331mil|Location2.Y=2612.165mil|Absolute=True">SMT Small Component R6-Resistor (-28.32mm,-8.236mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2210.827mil|Location2.X=2342.717mil|Location1.Y=2637.086mil|Location2.Y=2774.497mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2210.827mil|Location2.X=2342.717mil|Location1.Y=2637.086mil|Location2.Y=2774.497mil|Absolute=True">SMT Small Component R5-Resistor (-35.896mm,-5.753mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2211.811mil|Location2.X=2431.708mil|Location1.Y=2722.061mil|Location2.Y=2800.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2211.811mil|Location2.X=2431.708mil|Location1.Y=2722.061mil|Location2.Y=2800.472mil|Absolute=True">SMT Small Component R4-Resistor (-35.871mm,-3.453mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3299.032mil|Location2.X=3391.772mil|Location1.Y=3011.22mil|Location2.Y=3223.159mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3299.032mil|Location2.X=3391.772mil|Location1.Y=3011.22mil|Location2.Y=3223.159mil|Absolute=True">SMT Small Component R3-Resistor (-8.5mm,4.5mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3311.063mil|Location2.X=3397.708mil|Location1.Y=2775.046mil|Location2.Y=2985.984mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3311.063mil|Location2.X=3397.708mil|Location1.Y=2775.046mil|Location2.Y=2985.984mil|Absolute=True">SMT Small Component R2-Resistor (-8.55mm,0.509mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2212.795mil|Location2.X=2437.898mil|Location1.Y=2822.126mil|Location2.Y=2894.961mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2212.795mil|Location2.X=2437.898mil|Location1.Y=2822.126mil|Location2.Y=2894.961mil|Absolute=True">SMT Small Component R1-Resistor (-35.846mm,-1.053mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4581mil|Location2.X=4715.882mil|Location1.Y=2697.287mil|Location2.Y=3183.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4581mil|Location2.X=4715.882mil|Location1.Y=2697.287mil|Location2.Y=3183.987mil|Absolute=True">SIP Component P2-Header 4 (24mm,-1.25mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2998.114mil|Location2.X=3308.114mil|Location1.Y=2866.441mil|Location2.Y=3201.099mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2998.114mil|Location2.X=3308.114mil|Location1.Y=2866.441mil|Location2.Y=3201.099mil|Absolute=True">Component P1-Header 3X2 (-13.675mm,2.729mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=705.622mil|Location2.X=4692.953mil|Location1.Y=2506.693mil|Location2.Y=2815.064mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=705.622mil|Location2.X=4692.953mil|Location1.Y=2506.693mil|Location2.Y=2815.064mil|Absolute=True">SIP Component J3-2-87220-0 (0mm,-7.62mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2687.047mil|Location2.X=6681.378mil|Location1.Y=3143.11mil|Location2.Y=3409.064mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2687.047mil|Location2.X=6681.378mil|Location1.Y=3143.11mil|Location2.Y=3409.064mil|Absolute=True">SIP Component J2-2-87220-0 (0mm,7.62mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2626.024mil|Location2.X=2981.776mil|Location1.Y=2659.843mil|Location2.Y=3140.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2626.024mil|Location2.X=2981.776mil|Location1.Y=2659.843mil|Location2.Y=3140.157mil|Absolute=True">Component J1-USB micro (-24mm,0mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4439.429mil|Location2.X=4599.541mil|Location1.Y=2823.228mil|Location2.Y=2967.11mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4439.429mil|Location2.X=4599.541mil|Location1.Y=2823.228mil|Location2.Y=2967.11mil|Absolute=True">SMT Small Component D2-LED SMD (20.75mm,-1.25mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4422.349mil|Location2.X=4567.461mil|Location1.Y=2808.027mil|Location2.Y=2947.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4422.349mil|Location2.X=4567.461mil|Location1.Y=2808.027mil|Location2.Y=2947.244mil|Absolute=True">SMT Small Component D1-LED SMD (20.7mm,0.5mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.433mil|Location2.X=4603.33mil|Location1.Y=3058.465mil|Location2.Y=3135.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.433mil|Location2.X=4603.33mil|Location1.Y=3058.465mil|Location2.Y=3135.236mil|Absolute=True">SMT Small Component C15-Capacitor (18.5mm,5mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.433mil|Location2.X=4598.7mil|Location1.Y=2881.299mil|Location2.Y=2958.071mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.433mil|Location2.X=4598.7mil|Location1.Y=2881.299mil|Location2.Y=2958.071mil|Absolute=True">SMT Small Component C14-Capacitor (18.5mm,0.5mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.433mil|Location2.X=4601.7mil|Location1.Y=2969.882mil|Location2.Y=3046.654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.433mil|Location2.X=4601.7mil|Location1.Y=2969.882mil|Location2.Y=3046.654mil|Absolute=True">SMT Small Component C13-Capacitor (18.5mm,2.75mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.433mil|Location2.X=4595.33mil|Location1.Y=2792.717mil|Location2.Y=2869.488mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.433mil|Location2.X=4595.33mil|Location1.Y=2792.717mil|Location2.Y=2869.488mil|Absolute=True">SMT Small Component C12-Capacitor (18.5mm,-1.75mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2362.244mil|Location2.X=2498.071mil|Location1.Y=2536.811mil|Location2.Y=2690.191mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2362.244mil|Location2.X=2498.071mil|Location1.Y=2536.811mil|Location2.Y=2690.191mil|Absolute=True">SMT Small Component C11-Capacitor (-32mm,-8.25mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3425.236mil|Location2.X=3545.622mil|Location1.Y=3009.252mil|Location2.Y=3225.166mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3425.236mil|Location2.X=3545.622mil|Location1.Y=3009.252mil|Location2.Y=3225.166mil|Absolute=True">SMT Small Component C10-Capacitor (-5.75mm,4.5mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3444.921mil|Location2.X=3601.63mil|Location1.Y=2674.606mil|Location2.Y=2810.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3444.921mil|Location2.X=3601.63mil|Location1.Y=2674.606mil|Location2.Y=2810.433mil|Absolute=True">SMT Small Component C9-Capacitor (-5.25mm,-4mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4032.087mil|Location2.X=4168mil|Location1.Y=3311.614mil|Location2.Y=3467.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4032.087mil|Location2.X=4168mil|Location1.Y=3311.614mil|Location2.Y=3467.987mil|Absolute=True">SMT Small Component C7-Capacitor (10.414mm,11.43mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4488.228mil|Location2.X=4580.937mil|Location1.Y=2960.039mil|Location2.Y=3182.576mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4488.228mil|Location2.X=4580.937mil|Location1.Y=2960.039mil|Location2.Y=3182.576mil|Absolute=True">SMT Small Component C6-Capacitor (21.25mm,3.25mm) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3358.268mil|Location2.X=3445.298mil|Location1.Y=2675.197mil|Location2.Y=2891.11mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3358.268mil|Location2.X=3445.298mil|Location1.Y=2675.197mil|Location2.Y=2891.11mil|Absolute=True">SMT Small Component C5-Capacitor (-7.451mm,-3.985mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3269.685mil|Location2.X=3356.716mil|Location1.Y=2675.197mil|Location2.Y=2891.11mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3269.685mil|Location2.X=3356.716mil|Location1.Y=2675.197mil|Location2.Y=2891.11mil|Absolute=True">SMT Small Component C4-Capacitor (-9.701mm,-3.985mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3181.102mil|Location2.X=3268.133mil|Location1.Y=2675.197mil|Location2.Y=2891.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3181.102mil|Location2.X=3268.133mil|Location1.Y=2675.197mil|Location2.Y=2891.097mil|Absolute=True">SMT Small Component C3-Capacitor (-11.951mm,-3.985mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2901.575mil|Location2.X=2988.22mil|Location1.Y=2675.197mil|Location2.Y=2871.734mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2901.575mil|Location2.X=2988.22mil|Location1.Y=2675.197mil|Location2.Y=2871.734mil|Absolute=True">SMT Small Component C2-Capacitor (-18.951mm,-3.985mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2815mil|Location2.X=2891.772mil|Location1.Y=2674.606mil|Location2.Y=2871.513mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\HOC_TAP\03_THAYBAO\BLUEPILL_PCB\Bluepill\Bluepill.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2815mil|Location2.X=2891.772mil|Location1.Y=2674.606mil|Location2.Y=2871.513mil|Absolute=True">SMT Small Component C1-Capacitor (-21.25mm,-4mm) on Bottom Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
